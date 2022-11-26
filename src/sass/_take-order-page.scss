@@ -1,0 +1,176 @@
+.take-order{
+    
+    &-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        margin: 0 auto;
+        @media screen and (min-width:768px) {
+            display: grid;
+            grid-template-columns: 387px auto;
+            row-gap: 40px;
+            column-gap: 24px;
+        }
+        @media screen and (min-width:1280px) {
+            display: grid;
+            grid-template-columns: 387px auto;
+            column-gap: 121px;
+        }
+    }
+    &-photo{
+        -webkit-transition-property: all; 
+        -webkit-transition-duration: 0.3s; 
+        -webkit-transition-timing-function: ease; 
+        border-radius: 4px;
+        &:hover,&:focus{
+            box-shadow: 0px 1px 1px $primaryTextColor, 0px 4px 4px $primaryTextColor, 1px 4px 6px $primaryTextColor;
+            transform: scale(1.1);
+        }
+    }
+    &-main{
+        border-radius: 12px;
+        grid-column: 1;
+        grid-row: 2;
+        @media screen and (min-width:1280px) {
+            grid-column: 1;
+            grid-row: 1/4;
+        }
+    }
+
+    &-title{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 38px;
+        @media screen and (min-width:768px) {
+            font-size: 56px;
+            line-height: 66px;
+        }
+        @media screen and (min-width:1280px) {
+            font-size: 56px;
+            line-height: 66px;
+        }
+       
+        color: #FFFFFF;
+        display: block;
+        white-space: nowrap;
+        
+    }
+    &-picture{
+        width: 387px;
+        height: 346px;
+    }
+
+    &-price-list{
+        display: flex;
+        gap: 60px;
+        @media screen and (min-width:768px){
+            grid-column: 2;
+            grid-row:2;
+            flex-direction: column;
+            justify-content: center;
+            gap: 56px;
+        }
+
+        @media screen and (min-width:1280px) {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 40px;
+            grid-column: 2;
+            grid-row:2;
+        }
+    }
+    &-photos{
+        display: flex;
+        gap: 24px;
+        @media screen and (min-width:768px) {
+            grid-column: 1/span 2;
+            grid-row: 3;
+        }
+        @media screen and (min-width:1280px) {
+            grid-column: 2;
+            grid-row: 3;
+        }
+        
+    }
+}
+
+.title__left_take{
+    margin-left: calc(((100% - 320px) / 2) + 20px);
+
+  @media screen and (min-width: 480px) {
+    margin-left: calc(((100% - 480px) / 2) + 102px);
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: calc(((100% - 768px) / 2) + 142px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-left: calc(((100% - 1280px) / 2) + 142px);
+  }
+}
+
+
+.product-title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    @media screen and (min-width:768px) {
+        grid-column: 1/span 2;
+        grid-row: 1;
+        font-size: 56px;
+        line-height: 66px;
+        font-size: 56px;
+        line-height: 66px;
+        white-space: nowrap;
+    }
+    @media screen and (min-width:1280px) {
+        grid-column: 2;
+        font-size: 56px;
+        line-height: 66px;
+    }
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+.price{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    color: $primaryTextColor;
+    @media screen and (min-width:768px) {
+        white-space: nowrap;
+    }
+    @media screen and (min-width:1280px) {
+        font-size: 48px;
+        line-height: 100%;
+        white-space: nowrap;
+    }
+    
+
+
+  &__crossed{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    
+    @media screen and (min-width:768px) {
+            
+    }
+    @media screen and (min-width:1280px) {
+        font-size: 24px;
+        line-height: 100%;
+    }
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+    text-decoration-line: line-through;
+    color: $linkTextColor !important;
+    }  
+}

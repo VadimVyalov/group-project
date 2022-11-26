@@ -1,23 +1,150 @@
-.swiper {
-  width: 1280px;
-  height: 560px;
+.swiper--gallery {
+  min-width: 320px;
+  margin: 0 auto;
 }
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets {
+  bottom: 0;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 24px;
+}
+
 .swiper-pagination-bullet {
+  opacity: 1;
   width: 16px;
   height: 16px;
   background: $secondaryTextColor;
 }
+
 .swiper-pagination-bullet-active {
   width: 40px;
   height: 16px;
   background: $secondaryTextColor;
   border-radius: 30px;
 }
-.gallery-conteiner {
-  padding-top: 120px;
-  padding-bottom: 160px;
-  width: 100%;
-  min-width: 320px;
+
+.swiper-slide {
+  position: relative;
+}
+
+.gallery-img {
   margin: 0 auto;
-  background-image: url(../images/gallery/bg_gallery.jpg);
+  border-top: solid 2px $primaryTextColor;
+  border-bottom: solid 2px $primaryTextColor;
+}
+
+.gallery-text_des-1 {
+  position: absolute;
+  left: 24px;
+  bottom: 37px;
+  @include tablet {
+    left: 41px;
+    bottom: 14px;
+  }
+  @include desktop {
+    left: 345px;
+    bottom: 49px;
+  }
+
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  @include tablet {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 1.18;
+  }
+
+  background: $gradBn1Text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gallery-text_des-2 {
+  position: absolute;
+  left: 24px;
+  bottom: 37px;
+  @include tablet {
+    left: 41px;
+    bottom: 14px;
+  }
+  @include desktop {
+    left: 56px;
+    top: 215px;
+  }
+
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.38;
+
+  @include tablet {
+    font-family: 'OpenSans';
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 1.36;
+  }
+
+  background: $gradBn3Text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gallery-text_des-3 {
+  position: absolute;
+  left: 24px;
+  bottom: 37px;
+  @include tablet {
+    left: 41px;
+    bottom: 14px;
+  }
+  @include desktop {
+    left: 49px;
+    top: 297px;
+  }
+
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.38;
+
+  @include tablet {
+    font-family: 'OpenSans';
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 1.36;
+  }
+
+  background: $gradBn2Text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gallery-text_uppercase {
+  text-transform: uppercase;
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.38;
+
+  @include tablet {
+    font-family: 'OpenSans';
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 1.36;
+  }
 }

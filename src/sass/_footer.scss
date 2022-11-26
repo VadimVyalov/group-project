@@ -1,16 +1,13 @@
 .footer {
   background-color: $footerBgColor;
-  padding-top: 25px;
-  padding-left: 16px;
-  padding-bottom: 24px;
-  padding-right: 32px;
-  @include tablet {
-    padding: 40px;
-  }
 }
 .page-footer {
+  padding-top: 25px;
+  padding-bottom: 24px;
+  background-color: $footerBgColor;
   @include tablet {
     display: flex;
+    padding: 40px;
   }
 }
 .logo-footer {
@@ -18,17 +15,26 @@
   font-size: 24px;
   line-height: 1.17;
   text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  max-width: 115px;
   @include mobile {
-    margin-bottom: 25px;
+    // margin-bottom: 25px;
   }
   @include tablet {
     margin-right: 61px;
   }
   @include desktop {
     margin-right: 118px;
+    max-height: 56px;
   }
 
   color: $secondaryTextColor;
+  transition: text-shadow $durationFunction $timingFunction;
+  &:hover,
+  &:focus {
+    text-shadow: $boxShadow;
+  }
 }
 
 .main-nav-link {
@@ -37,6 +43,11 @@
   line-height: 100%; //??
 
   color: $secondaryTextColor;
+  transition: color $durationFunction $timingFunction;
+  &:hover,
+  &:focus {
+    color: $curlineBottomColor;
+  }
 }
 
 .main-nav-item:not(:last-child) {
@@ -89,6 +100,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: currentColor;
+  transition: fill $durationFunction $timingFunction;
+  &:hover,
+  &:focus {
+    fill: $curlineBottomColor;
+  }
 }
 .footer-text {
   font-weight: 400;
@@ -108,6 +125,11 @@
   text-transform: capitalize;
 
   color: $secondTextColor;
+  transition: color $durationFunction $timingFunction;
+  &:hover,
+  &:focus {
+    color: $curlineBottomColor;
+  }
 }
 .footer-text-phone {
   margin-top: 16px;
